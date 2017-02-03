@@ -1,0 +1,17 @@
+<table class="pretty">
+  <tr>
+  	<th width='20%'><%= sortable "sharedate", "分享日期" %></th>
+  	<th width='30%'><%= sortable "thequote", "嘉句" %></th>
+  	<th width='40%'><%= sortable "review", "心得" %></th>
+  </tr>
+  <% @thewords.each do |theword| %>
+  	<tr>
+  		<td><%= theword.sharedate %></td>
+  		<td><%= theword.thequote %></td>
+  		<td><%= theword.review %></td>
+  		<td><%= link_to '編輯', :controller => 'thewords', :action => :edit, :id => theword %>
+  		<td><%= link_to '刪除', :controller => 'thewords', :action => :destroy, :id =>theword %>
+  	</tr>
+  <% end %>
+</table>
+<%= link_to 'New word', :controller => 'thewords', :action => :new %>

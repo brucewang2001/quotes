@@ -1,0 +1,2 @@
+module ThewordsHelper
+end

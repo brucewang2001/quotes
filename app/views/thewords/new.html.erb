@@ -1,0 +1,12 @@
+<%= form_for @theword, :url => { :controller => 'thewords', :action=> 'create' } do |f| %>
+	<%= f.label :sharedatelabel, "分享日期：" %>
+	<%= f.text_field :sharedate %>
+
+	<%= f.label :thequotelabel, "嘉言：" %>
+	<%= f.text_area :thequote %>
+
+	<%= f.label :reviewlabel, "心得：" %>
+	<%= f.text_area :review %>
+
+	<%= f.submit "Create" %>
+<% end %>
